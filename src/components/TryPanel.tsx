@@ -37,7 +37,7 @@ export default function TryPanel(){
       const out = xorBytes(b, ks);
       setOutHex(bytesToHex(out));
       try{ const ctx = new (window.AudioContext || (window as any).webkitAudioContext)(); const o=ctx.createOscillator(); const g=ctx.createGain(); o.type='sine'; o.frequency.value=480; o.connect(g); g.connect(ctx.destination); g.gain.value=0.0001; g.gain.exponentialRampToValueAtTime(0.08,ctx.currentTime+0.01); o.start(); g.gain.exponentialRampToValueAtTime(0.0001,ctx.currentTime+0.18); o.stop(ctx.currentTime+0.2);}catch(e){};
-    }catch(e){ alert('Error: '+e.message); }
+    }catch(e: any){ alert('Error: '+e.message); }
   }
 
   return (
