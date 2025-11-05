@@ -1,0 +1,2 @@
+import React from 'react';
+export default function About(){ return (<div className='panel'><h3 style={{fontSize:18}}>About this project</h3><p style={{color:'var(--muted)',marginTop:8}}>This interactive project visualizes ChaCha20 internals step-by-step and allows you to generate a 64-byte keystream block and use it to XOR plaintext for demo encryption. Sounds and neon visuals included.</p></div>); }

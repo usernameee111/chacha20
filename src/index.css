@@ -1,0 +1,45 @@
+\
+:root{
+  --bg:#06060a;
+  --panel:#071225;
+  --neon-cyan:#00ffd6;
+  --neon-purple:#9b7bff;
+  --neon-green:#7fff6b;
+  --muted:#9aa6b2;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body,#root{height:100%}
+body{
+  background: radial-gradient(circle at 10% 10%, #071126 0%, var(--bg) 40%);
+  color:#eaf6ff;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing:antialiased;
+}
+
+.header{position:fixed;top:0;left:0;right:0;backdrop-filter:blur(6px);border-bottom:1px solid rgba(255,255,255,0.03);z-index:60}
+.header .inner{display:flex;align-items:center;justify-content:space-between;padding:12px 24px;max-width:1200px;margin:0 auto}
+.logo-badge{width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,var(--neon-cyan),var(--neon-purple));display:flex;align-items:center;justify-content:center;color:#001;font-weight:800;box-shadow:0 8px 30px rgba(0,255,210,0.06)}
+.nav-links{display:flex;gap:18px;align-items:center}
+.nav-links a{color:var(--muted);text-decoration:none;font-weight:700}
+.nav-links a:hover{color:white;transform:translateY(-2px)}
+
+.container{max-width:1200px;margin:0 auto;padding:24px}
+.section{padding:120px 0 60px}
+.hero-title{font-size:40px;font-weight:800;letter-spacing:-0.02em}
+.hero-sub{color:var(--muted);margin-top:8px}
+
+.panel{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:18px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+
+.btn{background:linear-gradient(90deg,var(--neon-cyan),var(--neon-purple));color:#001;padding:8px 12px;border-radius:8px;border:none;font-weight:700;cursor:pointer;box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+.btn.ghost{background:transparent;color:var(--neon-cyan);border:1px solid rgba(255,255,255,0.04)}
+
+.vis-legend{display:flex;gap:8px;align-items:center;color:var(--muted);font-size:14px;margin-bottom:8px}
+
+.footer{padding:40px 0;color:var(--muted);text-align:center}
+
+/* responsive */
+@media (max-width:900px){
+  .nav-links{display:none}
+  .hero-title{font-size:28px}
+}
